@@ -46,7 +46,7 @@ jobs:
           path: ./it
           key: minosoft-assets
 
-      - name: Build
+      - name: build
         uses: gradle/gradle-build-action@v3
         with:
           arguments: assemble -Pminosoft.updates=true
