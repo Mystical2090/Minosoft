@@ -1,6 +1,6 @@
 /*
  * Minosoft
- * Copyright (C) 2020-2023 Moritz Zwerger
+ * Copyright (C) 2020-2023 Mystical433
  *
  * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  *
@@ -29,7 +29,6 @@ abstract class FileAssetsManager(private val canUnload: Boolean = true) : Assets
         protected set
     protected val assets: MutableMap<ResourceLocation, ByteArray> = mutableMapOf()
 
-
     override fun get(path: ResourceLocation): InputStream {
         return ByteArrayInputStream(assets[path] ?: throw FileNotFoundException("Can not find asset $path"))
     }
@@ -44,5 +43,9 @@ abstract class FileAssetsManager(private val canUnload: Boolean = true) : Assets
         }
         assets.clear()
         loaded = false
+    }
+    fun minecraftForge() {
+        // i will add later
+        
     }
 }
